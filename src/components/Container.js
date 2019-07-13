@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Card from './Card';
-import Pusheens from "./../pusheens.json"
+import Images from "./../images.json"
 import shuffle from "shuffle-array";
 
 class Container extends Component {
@@ -8,29 +8,29 @@ class Container extends Component {
     constructor(props) {
         super(props);
 
-        // setting the state: score is at 1, pusheens is pulling in the pusheen json, and we have no selected pusheens yet
+        // setting the state: score is at 1, images is pulling in the image json, and we have no selected images yet
         this.state = {
             score: 1,
-            pusheens: Pusheens,
-            selectedPusheens: []
+            images: Images,
+            selectedImages: []
         };
     }
 
     
-    // when the user clicks on a pusheen card
+    // when the user clicks on a image card
     handleClick = (e) => {
 
-        // grab the selected pusheen's id
+        // grab the selected image's id
         let id = e.target.id;
 
-        // init variable that sees if the user selects a pusheen that's already in selectedpusheens
+        // init variable that sees if the user selects a image that's already in selectedImages
         let exists = false;
 
-        // loop through selected pusheens and see if any ids match selected id
-        this.state.selectedPusheens.forEach(pusheen => {
+        // loop through selected images and see if any ids match selected id
+        this.state.selectedImages.forEach(image => {
 
             // if id matches
-            if (pusheen.id == id) {
+            if (image.id == id) {
  
                 // change exists to true
                 exists = true;
@@ -45,13 +45,13 @@ class Container extends Component {
 
         // otherwise
         else {
-            // loop through the pusheen json
-            this.state.pusheens.forEach(pusheen => {
-                // if the pusheen id matches the selected id
-                if (pusheen.id == id) {
-                    // add the pusheen to the selected pusheen array
-                    this.setState({selectedPusheens: [...this.state.selectedPusheens, pusheen]});
-                    console.log(this.state.selectedPusheens);
+            // loop through the image json
+            this.state.images.forEach(image => {
+                // if the image id matches the selected id
+                if (image.id == id) {
+                    // add the image to the selected image array
+                    this.setState({selectedImages: [...this.state.selectedImages, image]});
+                    console.log(this.state.selectedImages);
 
                     // update the score
                     this.updateScore();
@@ -60,9 +60,9 @@ class Container extends Component {
         }
         
 
-        // SHUFFLE THE PUSHEENS
-        this.setState({ pusheens: shuffle(this.state.pusheens)});
-        console.log("Shuffling Pusheens");
+        // SHUFFLE THE images
+        this.setState({ images: shuffle(this.state.images)});
+        console.log("Shuffling images");
 
     }
 
@@ -81,7 +81,7 @@ class Container extends Component {
         // push the current game score as the new top score 
         this.props.updateTopScore(this.state.score);
         // set the score back to 1 and the selected array to empty 
-        this.setState({score: 1, selectedPusheens: []});
+        this.setState({score: 1, selectedImages: []});
         // update the current score to 0
         this.props.updateCurrentScore(0);
     }
@@ -90,7 +90,7 @@ class Container extends Component {
         return (
             <div className="container" id="card-container">
                 <div className="row">
-                    {Pusheens.map(pusheen => <Card src={pusheen.image} key={pusheen.id} id={pusheen.id} alt={pusheen.name} endGame={this.endGame} handleClick={this.handleClick} score={this.state.score} />)}
+                    {Images.map(image => <Card src={image.image} key={image.id} id={image.id} alt={image.name} endGame={this.endGame} handleClick={this.handleClick} score={this.state.score} />)}
                 </div>
             </div>
         );

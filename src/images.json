@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Aquarius",
+      "image": "https://media.giphy.com/media/vguMx94ZQzi4Yv50wr/giphy.gif"
+    },
+    {
+        "id": 2,
+        "name": "Pices",
+        "image": "https://media.giphy.com/media/SIIMh8NvCbq6bSva42/giphy.gif"
+    },
+    {
+        "id": 3,
+        "name": "Aries",
+        "image": "https://media.giphy.com/media/SIJtBN3jaEh4vb8iuD/giphy.gif"
+    },
+    {
+        "id": 4,
+        "name": "Taurus",
+        "image": "https://media.giphy.com/media/1yN5TDiyzMcW8b9ESU/giphy.gif"
+    },
+    {
+        "id": 5,
+        "name": "Gemini",
+        "image": "https://media.giphy.com/media/3BMJzK6B32F6tUgxPC/giphy.gif"
+    },
+    {
+        "id": 6,
+        "name": "Cancer",
+        "image": "https://media.giphy.com/media/psmkk8fg6LFgPDHDpU/giphy.gif"
+    },
+    {
+        "id": 7,
+        "name": "Leo",
+        "image": "https://media.giphy.com/media/fQxT09KIITG9xedBPp/giphy.gif"
+    },
+    {
+        "id": 8,
+        "name": "Virgo",
+        "image": "https://media.giphy.com/media/2rALh9HTmAPC6BsEi9/giphy.gif"
+    },
+    {
+        "id": 9,
+        "name": "Libra",
+        "image": "https://media.giphy.com/media/fCU0geFmuFbNAM1BmV/giphy.gif"
+    },
+    {
+        "id": 10,
+        "name": "Scorpio",
+        "image": "/src/Scorpio.gif"
+    },
+    {
+        "id": 11,
+        "name": "Sagittarius",
+        "image": "https://media.giphy.com/media/jyBfEzEkPyxb6UJ56I/giphy.gif"
+    },
+    {
+        "id": 12,
+        "name": "Capricorn",
+        "image": "https://media.giphy.com/media/69lRHRaR6WYtCrHCgI/giphy.gif"
+    }
+]

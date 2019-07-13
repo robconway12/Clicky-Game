@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import CardContainer from "./components/CardContainer"
+import Container from "./components/Container"
 
 class App extends Component {
   // setting the state
@@ -31,7 +31,7 @@ class App extends Component {
       <div>
         <Navbar score={this.state.count} top={this.state.topScore}/>
         <Header/>
-        <CardContainer updateCurrentScore={this.updateCurrentScore} updateTopScore={this.updateTopScore}/>
+        <Container updateCurrentScore={this.updateCurrentScore} updateTopScore={this.updateTopScore}/>
       </div>
     );
   }

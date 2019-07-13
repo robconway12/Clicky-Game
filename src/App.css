@@ -6,11 +6,17 @@
   padding-top: 120px;
   padding-bottom: 60px;
   max-width: 100%;
-  background-color: rgb(197, 234, 247);
+  background-color: rgb(14, 43, 54);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
 }
 
 #counters {
-  color: white;
+  color: lightgray;
+}
+
+body {
+  background-color: lightgray;
 }
 
 #card-container {
@@ -19,12 +25,29 @@
 
 .card {
   width: 200px;
+  height: 200px;
+  object-fit: fill;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: .3s width;
+}
+
+.card:hover {
+  width: 210px;
+  transition: .3s width;
 }
 
 #logo {
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Henny Penny', cursive;
 }
 
 .subtitle, #counters {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1 {
+  color: darkkhaki;
+}
+
+h5 {
+  color: lightgray;
 }
