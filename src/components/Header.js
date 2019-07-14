@@ -5,7 +5,7 @@ const Header = props => (
     className="container text-center d-flex justify-content-around"
     id="header-container"
   >
-    <h1 className="align-middle" id="logo">
+    <h1 className="mt-3" id="logo">
       <b>Clicky Game</b>
     </h1>
     <h5 className="subtitle">

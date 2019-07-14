@@ -23,10 +23,6 @@
   font-size: 35px;
 }
 
-#topScore{
-  font-size: 20px;
-}
-
 body {
   background-color: lightgray;
 }
@@ -51,6 +47,7 @@ body {
 #logo {
   font-family: "Henny Penny", cursive;
   color: darkkhaki;
+  font-size: 50px;
 }
 
 .subtitle,

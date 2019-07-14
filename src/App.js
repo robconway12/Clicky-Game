@@ -26,8 +26,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar score={this.state.count} top={this.state.topScore}/>
         <Header/>
+        <Navbar score={this.state.count} top={this.state.topScore}/>
         <Container updateCurrentScore={this.updateCurrentScore} updateTopScore={this.updateTopScore}/>
       </div>
     );
