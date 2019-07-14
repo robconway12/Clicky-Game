@@ -20,40 +20,27 @@ class Container extends Component {
     // when the user clicks on a image card
     handleClick = (e) => {
 
-        // grab the selected image's id
         let id = e.target.id;
-
-        // init variable that sees if the user selects a image that's already in selectedImages
         let exists = false;
 
-        // loop through selected images and see if any ids match selected id
         this.state.selectedImages.forEach(image => {
-
-            // if id matches
+// eslint-disable-next-line
             if (image.id == id) {
- 
-                // change exists to true
                 exists = true;
             }
         })
 
-        // if exists is true
         if (exists) {
-            // end the game
             this.endGame();
         }
 
-        // otherwise
         else {
-            // loop through the image json
             this.state.images.forEach(image => {
-                // if the image id matches the selected id
+                // eslint-disable-next-line
                 if (image.id == id) {
-                    // add the image to the selected image array
                     this.setState({selectedImages: [...this.state.selectedImages, image]});
                     console.log(this.state.selectedImages);
 
-                    // update the score
                     this.updateScore();
                 }
             })  
