@@ -5,23 +5,20 @@ import Header from "./components/Header";
 import Container from "./components/Container"
 
 class App extends Component {
-  // setting the state
   state = {
     count: 0,
     topScore: 0
   }
 
-  // update the current score count in the nav
+  // update the current score
   updateCurrentScore = (newCount) => {
-    // set the new count as the count
     this.setState({count: newCount});
   }
 
-  // update the top score in the nav
+  // update the top score
   updateTopScore = (newTop) => {
-    // if the new top score is higher than the current
     if (newTop > this.state.topScore) {
-      // then set the state but you have to subtract 1
+      // set the state and subtract 1
       this.setState({topScore: newTop - 1})
     }
   }
