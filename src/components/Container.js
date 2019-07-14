@@ -30,7 +30,7 @@ class Container extends Component {
         this.state.selectedImages.forEach(image => {
 
             // if id matches
-            if (image.id === id) {
+            if (image.id == id) {
  
                 // change exists to true
                 exists = true;
@@ -48,7 +48,7 @@ class Container extends Component {
             // loop through the image json
             this.state.images.forEach(image => {
                 // if the image id matches the selected id
-                if (image.id === id) {
+                if (image.id == id) {
                     // add the image to the selected image array
                     this.setState({selectedImages: [...this.state.selectedImages, image]});
                     console.log(this.state.selectedImages);
